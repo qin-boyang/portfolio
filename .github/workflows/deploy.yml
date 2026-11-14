@@ -33,11 +33,13 @@ jobs:
           targets: wasm32-unknown-unknown
 
       - name: Install Dioxus CLI
-        run: cargo install dioxus-cli --version 0.7.0 --locked
+        uses: taiki-e/install-action@v2
+        with:
+          tool: dioxus-cli@0.7.10
 
       - name: Build static site
         run: |
-          dx bundle --platform web --release --out-dir dist
+          dx bundle --release --out-dir dist
           mv dist/public/* dist/
           cp dist/index.html dist/404.html
           touch dist/.nojekyll

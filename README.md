@@ -7,7 +7,7 @@ A terminal-inspired portfolio built with Rust and Dioxus for static hosting on G
 Install the Dioxus CLI, then start the web app:
 
 ```sh
-cargo install dioxus-cli --version 0.7.0 --locked
+cargo install dioxus-cli --version 0.7.10 --locked
 dx serve --platform web
 ```
 
